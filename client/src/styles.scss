@@ -60,8 +60,15 @@ body,
   margin-right: 36px;
 }
 
+.loginPage {
+  width: 75%;
+  margin: 3% auto;
+}
+
 form {
-  margin-top: 60px;
+  width: 30%;
+  font-size: 1.8rem;
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
 
@@ -76,11 +83,22 @@ form {
   label {
     display: flex;
     justify-content: space-between;
-    padding: 4px 36px 4px 40px;
+    margin: 1rem 0;
   }
 
   input {
-    width: 100px;
+    width: 67.8%;
+    padding: 1.8% 2.5%;
+    border-radius: 10px;
+    border: 1.3px solid black;
+    box-shadow: 5px 10px #888888;
+  }
+
+  .submit{
+    padding: 2%;
+    width: 20%;
+    align-self: flex-end;
+    margin-right: 25%;
   }
 }
 

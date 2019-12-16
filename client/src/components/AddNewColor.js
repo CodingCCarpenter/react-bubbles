@@ -1,7 +1,7 @@
 import React from 'react';
 import useForm from 'react-hook-form';
 
-import axiosWithAuth from '../axiosWithAuth';
+import axiosWithAuth from '../auth/axiosWithAuth';
 
 const AddNewColor = () => {
     const { register, handleSubmit, reset } = useForm();

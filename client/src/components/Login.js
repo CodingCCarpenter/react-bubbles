@@ -23,10 +23,10 @@ const Login = (props) => {
   }
   
   return (
-    <div>
+    <div className = 'loginPage'>
       <h1>Welcome to the Bubble App!</h1>
       {/* <p>Build a login page here</p> */}
-      <form onSubmit= { handleSubmit(onSubmit) }>
+      <form className='loginForm' onSubmit={ handleSubmit(onSubmit) }>
         <label for='username'>
           Username: 
         </label>
@@ -39,7 +39,7 @@ const Login = (props) => {
         <input type='password' name='password' id='password' ref={ register } />
         <br/>
         
-        <input type='submit' value='Log In' />
+        <input type='submit' value='Log In' className='submit' />
       </form>
 
     </div>
