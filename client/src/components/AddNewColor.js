@@ -3,7 +3,7 @@ import useForm from 'react-hook-form';
 
 import axiosWithAuth from '../axiosWithAuth';
 
-const AddColor = () => {
+const AddNewColor = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = (data, e) => {
@@ -18,13 +18,13 @@ const AddColor = () => {
             .post('./colors', newColor)
             .then((res) => {
                 console.log(
-                    'src/components/AddColor.js: AddColor: axiosWithAuth: .then: RES:', 
+                    'src/components/AddNewColor.js: AddNewColor: axiosWithAuth: .then: RES:', 
                     res
                 )
             })
             .catch((err) => {
                 console.log(
-                    'src/components/AddColor.js: AddColor: axiosWithAuth: .catch: ERROR: ',
+                    'src/components/AddNewColor.js: AddNewColor: axiosWithAuth: .catch: ERROR: ',
                     err
                 )
             });
@@ -48,4 +48,4 @@ const AddColor = () => {
     );
 };
 
-export default AddColor;
+export default AddNewColor;
