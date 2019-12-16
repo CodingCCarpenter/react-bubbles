@@ -41,10 +41,10 @@ const ColorList = ({ colors, updateColors }) => {
     // where is is saved right now?
   };
 
-  const deleteColor = color => {
+  const deleteColor = (color) => {
     // make a delete request to delete this color
     axiosWithAuth()
-      .delete(`/colors${color.id}`, color)
+      .delete(`/colors/${color.id}`, color)
       .then((res) => {
         console.log(
           'src/components/ColorList.js: ColorList: deleteColor: axiosWithAuth: .then: RES: ',
@@ -62,7 +62,8 @@ const ColorList = ({ colors, updateColors }) => {
 
   return (
     <div className="colors-wrap">
-      <p>Colors</p>
+      <div>
+      <h1>Colors</h1>
       <ul>
         {colors.map(color => (
           <li key={color.color} onClick={() => editColor(color)}>
@@ -115,7 +116,9 @@ const ColorList = ({ colors, updateColors }) => {
       )}
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
-      <AddNewColor />
+       
+    </div>
+    <AddNewColor/>
     </div>
   );
 };

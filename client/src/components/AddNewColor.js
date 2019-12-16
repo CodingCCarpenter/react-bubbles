@@ -14,6 +14,8 @@ const AddNewColor = () => {
             color: data.color
         };
 
+        //clearing text from form to leave form clean for new colors
+        e.target.reset();
         axiosWithAuth()
             .post('./colors', newColor)
             .then((res) => {
@@ -42,7 +44,7 @@ const AddNewColor = () => {
                 <input type='text' name='hex' id='hex' ref={ register } />
                 <br/>
 
-                <input type='submit' value='add' />
+                <input type='submit' value='Submit' />
             </form>
         </div>
     );

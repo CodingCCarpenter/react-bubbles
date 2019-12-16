@@ -7,6 +7,7 @@ import ColorList from "./ColorList";
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
+  console.log('src/components/BubblePage BUBBLEPAGE CALLED')
   // fetch your colors data from the server when the component mounts
   axiosWithAuth()
   .get('/colors')
@@ -23,7 +24,7 @@ const BubblePage = () => {
   
 
   return (
-    <div>
+    <div className='appBubbleWrapper'>
       <ColorList colors={colorList} updateColors={setColorList} />
       <Bubbles colors={colorList} />
     </div>
